@@ -1,0 +1,162 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    height: 90%;
+    box-sizing: border-box;
+}
+
+.config-container {
+    flex: 1.5;
+    margin-right: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em; /* Aumenta el tamaño del título */
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.5em; /* Aumenta el tamaño de las etiquetas */
+}
+
+input[type="number"], input[type="file"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    font-size: 1.2em; /* Aumenta el tamaño de los campos de entrada */
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input[type="range"] {
+    margin-left: 20px;
+    flex-grow: 1;
+    height: 10px;
+}
+
+span {
+    font-size: 1.2em; /* Aumenta el tamaño del texto de los porcentajes */
+}
+
+#error-message {
+    color: red;
+    margin-top: 20px;
+    display: none;
+    font-size: 1.2em; /* Aumenta el tamaño del mensaje de error */
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 1.5em; /* Aumenta el tamaño del botón */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.timer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.timer p {
+    margin: 10px 0;
+    font-size: 1.5em; /* Aumenta el tamaño del texto del temporizador */
+}
+
+.images-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    min-width: 300px; /* Asegura un ancho mínimo para el contenedor de imágenes */
+}
+
+.image-box {
+    text-align: center;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.image-box h2 {
+    font-size: 2em; /* Aumenta el tamaño del título de las imágenes */
+}
+
+.image-wrapper {
+    width: 100%;
+    max-width: 400px; /* Limita el tamaño máximo del contenedor de la imagen */
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    max-height: 300px; /* Limita la altura máxima de la imagen */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin distorsionarse */
+}
+
+@media (min-width: 768px) {
+    .main-container {
+        flex-direction: row;
+    }
+    
+    .config-container {
+        flex: 2; /* Ajusta el tamaño relativo del contenedor de configuración */
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+    
+    .images-container {
+        flex: 1;
+        flex-direction: column; /* Mantén las imágenes en columna */
+    }
+    
+    .image-box {
+        flex: 1;
+        margin-bottom: 20px;
+    }
+    
+    .image-box:last-child {
+        margin-bottom: 0;
+    }
+}
+
+

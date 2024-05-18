@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz Genética</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="config-container">
+            <h1>Algoritmo Genético - Configuración</h1>
+            
+            <label for="target-image">Imagen Objetivo:</label>
+            <input type="file" id="target-image" accept="image/*" onchange="loadTargetImage(event)">
+            
+            <label for="max-generations">Cantidad de Generaciones Máxima:</label>
+            <input type="number" id="max-generations" min="1" value="100">
+            
+            <label for="population-size">Cantidad de Individuos por Generación:</label>
+            <input type="number" id="population-size" min="1" value="50">
+            
+            <label>Porcentaje de Individuos:</label>
+            <div class="slider-container">
+                <label for="selection-percentage">Seleccionar:</label>
+                <input type="range" id="selection-percentage" min="0" max="100" value="50">
+                <span id="selection-percentage-value">50%</span>
+            </div>
+            <div class="slider-container">
+                <label for="mutation-percentage">Mutar:</label>
+                <input type="range" id="mutation-percentage" min="0" max="50" value="25">
+                <span id="mutation-percentage-value">25%</span>
+            </div>
+            <div class="slider-container">
+                <label for="crossover-percentage">Combinar:</label>
+                <input type="range" id="crossover-percentage" min="0" max="50" value="25">
+                <span id="crossover-percentage-value">25%</span>
+            </div>
+            <div id="error-message" class="error-message"></div>
+            
+            <button id="start-button">Iniciar</button>
+            
+            <div class="timer">
+                <p>Tiempo Total: <span id="total-time">00:00:00</span></p>
+                <p>Tiempo Promedio entre Generaciones: <span id="average-time">00:00:00</span></p>
+            </div>
+        </div>
+
+        <div class="images-container">
+            <div class="image-box">
+                <h2>Imagen Objetivo</h2>
+                <div class="image-wrapper">
+                    <img id="target-image-display" src="" alt="Imagen Objetivo">
+                </div>
+            </div>
+            <div class="image-box">
+                <h2>Imagen Generada</h2>
+                <div class="image-wrapper">
+                    <img id="generated-image-display" src="" alt="Imagen Generada">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="funcionalidad.js"></script>
+</body>
+</html>
+
+
